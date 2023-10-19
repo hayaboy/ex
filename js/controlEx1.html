@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- <script>
+
+        for (var i = 2; i <= 9; i++) {
+            for (var j = 1; j <= 9; j++) {
+                document.write(`${i}*${j}= ${i * j}   `);
+            }
+            document.write("<br>");
+        }
+    </script> -->
+</head>
+
+<body>
+
+    <script>
+
+        var str = `<table border="2" align="center">`;
+        document.write(str);
+
+        for (var i = 2; i <= 9; i++) {
+            document.write("<tr>");
+            for (var j = 1; j <= 9; j++) {
+                document.write(`<td align="center">`);
+                str = ` ${i}*${j}= ${i * j}`;
+                document.write(str);
+                document.write("</td>");
+            }
+            document.write("</tr>");
+        }
+    </script>
+
+</body>
+
+</html>

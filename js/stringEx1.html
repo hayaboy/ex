@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           var sn= prompt("당신의 주민번호는?");
+
+           document.write(sn);
+
+
+           	if (sn.length == 14 && sn.charAt(6) == '-') {
+                    document.write("<br>형식에 맞음<br>");
+                    if (sn.charAt(7) == '1' || sn.charAt(7) == '2') {
+                        document.write("1900년에서 1999년생<br>");
+                        if (sn.charAt(7) == '1') {
+                            document.write("남<br>");
+                        } else {
+                            document.write("여<br>");
+                        }
+                    } else if (sn.charAt(7) == '3') {
+                        document.write("2000년도 이후 태생<br>");
+                        document.write("남<br>");
+                    } else if (sn.charAt(7) == '4') {
+                        document.write("2000년도 이후 태생<br>");
+                        document.write("여<br>");
+                    } else {
+                        document.write("형식에 안 맞음<br>");
+                    }
+                } else {
+                    document.write("<br>형식에 안 맞음<br>");
+                }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

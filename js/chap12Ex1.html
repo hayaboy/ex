@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            // let arr = ['묘', '진', '사', '오', '미', '신', '유', '술', '해', '자', '축', '인']
+            // let arr2 = ['신', '유', '술', '해', '자', '축', '인' , '묘', '진', '사', '오', '미']
+
+            //     let your_birth_year = Number(prompt('당신의 출생연도는?'));
+            //     console.log(your_birth_year);
+            //     alert(arr2[your_birth_year % 12]);
+
+            let a = prompt('첫 번째 숫자를 입력해주세요', '');
+                let b = prompt('첫 번째 숫자를 입력해주세요', '');
+
+                a = Number(a);
+                b = Number(b);
+
+                let tot=0;
+                if(a<=b){
+                    for(let i=a;i<=b;i++){
+                        tot=tot+i;
+                    }
+                }else{
+                    for (let i = a; i >= b; i--) {
+                        tot = tot + i;
+                    }
+                }
+                alert(tot)
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

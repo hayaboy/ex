@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min); // 최소값은 올림
+            max = Math.floor(max); // 최대값은 내림
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var year = getRandomInt(0, 99); // 0부터 99까지의 랜덤한 숫자
+        var month = getRandomInt(1, 12); // 1부터 12까지의 랜덤한 숫자
+        var day = getRandomInt(1, 31); // 1부터 31까지의 랜덤한 숫자
+        // document.write(`${year}년 ${month}월 ${day}일 생`);
+
+
+        function personalInfo7() {
+            var personalInfo = "";
+
+            for (var i = 0; i < 7; i++) {
+                personalInfo += getRandomInt(0, 9); // 0부터 9까지의 랜덤한 숫자
+            }
+            return personalInfo;
+        }
+
+
+        // document.write("<br>");
+
+        var previous_ssn_year = '';
+
+        if (year >= 0 && year <= 9) {
+            document.write(`0${year}년`);
+            previous_ssn_year = `0${year}`;
+        } else {
+            document.write(`${year}년`);
+            previous_ssn_year = `${year}`;
+        }
+
+        var previous_ssn_month = '';
+        if (month >= 0 && month <= 9) {
+            document.write(`0${month}월`)
+            previous_ssn_month = `0${month}`;
+        } else {
+            document.write(`${month}월`)
+            previous_ssn_month = `${month}`;
+        }
+
+        var previous_ssn_day = '';
+        if (day >= 0 && day <= 9) {
+            document.write(`0${day}일<br>`)
+            previous_ssn_day = `0${day}`;
+        } else {
+            document.write(`${day}일<br>`)
+            previous_ssn_day = `${day}`;
+        }
+
+
+        final_ssn_previos = `${previous_ssn_year}${previous_ssn_month}${previous_ssn_day}`;
+
+
+        var ssn_last = personalInfo7();
+
+        document.write(`${final_ssn_previos}-${ssn_last}`);
+
+        var final_ssn = `${final_ssn_previos} -${ssn_last}`;
+
+
+        // 유효성 체크 함수
+        function isValid(residentRegistrationNumber) {
+            var regexPattern = "\\d{6}-\\d{7}"; // "6자리-7자리" 형식의 정규식 패턴
+
+            // 생년월일 부분을 추출하여 검사
+            var year = Number(residentRegistrationNumber.substring(0, 2));
+            var month = Number(residentRegistrationNumber.substring(2, 4));
+            var day = Number(residentRegistrationNumber.substring(4, 6));
+
+            if (year < 0 || year > 99 || month < 1 || month > 12 || day < 1 || day > 31) {
+                return false;
+            }
+
+            document.write(`<br>${year}년 ${month}월 ${day}일 태어남<br>`);
+
+             var genderDigit = residentRegistrationNumber.substring(8, 9);
+            document.write(`${genderDigit}<br>`);
+
+            if (genderDigit != 1 && genderDigit != 2 && genderDigit != 3 && genderDigit != 4) {
+                return false;
+            } else if (genderDigit == 1 || genderDigit == 3) {
+                document.write("남");
+            } else {
+               document.write("여");
+            }
+
+            var result = Pattern.matches(regexPattern, residentRegistrationNumber);
+
+            if (result) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+        var valid = isValid(final_ssn);
+        if (valid) {
+            document.write("유효")
+        } else {
+            document.write("유효하지 않음")
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

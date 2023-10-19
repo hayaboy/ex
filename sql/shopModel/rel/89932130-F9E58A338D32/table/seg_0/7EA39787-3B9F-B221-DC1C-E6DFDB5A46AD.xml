@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7EA39787-3B9F-B221-DC1C-E6DFDB5A46AD" name="buyTBL">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 06:52:29 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="userName" id="7476EB52-1FD5-B9F9-3636-2A4F6A9D0BCD">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 06:53:18 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="prodName" id="2E9CC2AB-6FCB-CC01-D741-8D72180A9477">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 06:54:01 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>3,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="11E102AA-A477-45E8-82E6-64A4BF063665">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 06:54:22 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="amount" id="B5512EB4-7B0F-976D-E312-5E58BD63C2D6">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 06:54:46 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="userTBL_userName" id="6CFA895A-E5BC-AE33-C005-19E25010B1F8">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 07:03:01 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT035</logicalDatatype>
+<dataTypeSize>3</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="62E34167-1F1B-5E3C-A8DA-B242289F426B" referredColumn="703E6556-A253-8CC2-82F7-D904F31BF18D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C0AE9AF4-AB39-237A-8B2F-449CA216D175" name="buyTBL_userTBL_FK">
+<createdBy>Administrator</createdBy>
+<createdTime>2023-08-30 07:03:01 UTC</createdTime>
+<ownerDesignName>shopModel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CFA895A-E5BC-AE33-C005-19E25010B1F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
