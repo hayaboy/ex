@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      window.onload = function () {
+        const goN = document.getElementById("goN");
+
+        goN.addEventListener(
+          "click",
+          function (event) {
+            event.preventDefault();
+          },
+          false
+        );
+      };
+    </script>
+  </head>
+  <body>
+    <a id="goN" href="http://www.naver.com"> N사 </a>
+  </body>
+</html>

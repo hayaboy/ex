@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      //   console.log(window);
+      //   console.log(window.jQuery);
+      //   console.log(window.$)
+      //   console.log($)
+      //   console.log(typeof(window.jQuery));
+
+      //이전 방식
+
+      //   window.onload = function () {
+      //     const h1 = document.getElementById("h1");
+      //     h1.style.backgroundColor = "red";
+      //   };
+
+      // jQuery특징
+
+      //jQuery 방식 1
+      //   $(document).ready(function () {
+      //       $('h1').css('backgroundColor','red');
+      //   });
+
+      //jQuery 방식 2
+      $(function () {
+        $("h1").css("backgroundColor", "blue");
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="h1">hi</h1>
+  </body>
+</html>

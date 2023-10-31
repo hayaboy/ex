@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        window.onload = function() {
+            function Person(name) {
+                this.name = name;
+
+                //이벤트 리스터 안의 this는 이벤트가 발생한 요소 객체를 가리킴
+
+                // 화살표 함수의 this는 함수를 초기화하는 시점에 결정됨
+                // 이를 활용하여 객체 안의 메서드를 화살표 함수로 표기하면 그 안의
+                // this가 생성된 객체를 가리킴
+                this.sayHello = () => {console.log("Hello! " + this.name);};
+
+
+            };
+            // Person.prototype.sayHello = function() {
+            //     console.log("Hello! " + this.name);
+            // }
+            var person = new Person("Tom");
+            var button = document.getElementById("button");
+
+            button.addEventListener("click", person.sayHello, false);
+            
+        };
+    </script>
+</head>
+<body>
+    <p>
+        <button id="button">버튼</button>
+    </p>
+</body>
+</html>

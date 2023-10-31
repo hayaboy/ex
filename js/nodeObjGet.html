@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      window.onload = function () {
+        // 1)id 속성으로 노드 가져오기
+        let title1 = document.getElementById("title1");
+        // title1.onclick = function () {
+        //   title1.style.backgroundColor = "green";
+        // };
+
+        //2) querySelector로 노드 가져오기
+        // querySelector"는 문서 내의 첫 번째 "h1" 요소를 선택합니다.
+        let title2 = document.getElementById("title2");
+        title2.onclick = function () {
+          document.querySelector("h1").style.backgroundColor = "yellow";
+        };
+
+        // document.querySelector("h1").style.backgroundColor = "yellow";
+
+        // let divs = document.getElementsByTagName("div");
+
+        // divs[1].onclick = function () {
+        //   divs[1].innerHTML = "여기를 수정함";
+        // };
+
+        let divs = document.getElementsByTagName("div");
+        let btn = document.getElementById("btn");
+        btn.onclick = function () {
+          // divs[0].innerHTML = "hi";
+          // divs[1].innerHTML = "hi";
+          // divs[2].innerHTML = "hi";
+
+          for (let i = 0; i < divs.length; i++) {
+            divs[i].innerHTML = "hi";
+          }
+        };
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- <h1 id="title1">JavaScript1</h1> -->
+    <h1 id="title2">JavaScript2</h1>
+
+    <!-- <div id="first">첫번째 div</div>
+    <div id="second">두번째 div</div>
+    <div id="third">세번째 div</div> -->
+    <div>첫번째 div</div>
+    <div>두번째 div</div>
+    <div>세번째 div</div>
+    <input id="btn" type="button" value="누르면 다 값이 hi로 바뀝니다." />
+  </body>
+</html>

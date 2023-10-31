@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+
+        window.onload = function () {
+
+        let outer = document.getElementById("outer");
+        let inner2 = document.getElementById("inner2"); // 이벤트 타깃 - 이벤트가 발생한 요소
+
+        outer.addEventListener("click", function (event) {
+            console.log("outer bubbling");
+        },false);
+
+         outer.addEventListener("click", function (event) {
+            console.log("outer capturing");
+        },true);
+
+        inner2.addEventListener("click", function (event) {
+            console.log("inner2 (1)");
+            event.stopPropagation() // 이벤트 전파 취소
+        },false);
+
+        inner2.addEventListener("click", function (event) {
+            console.log("inner2 (2)");
+            
+        },false);
+            
+        }
+
+    </script>
+
+
+  </head>
+  <body>
+    <div id="outer">
+      outer
+      <div id="inner1">inner1</div>
+      <div id="inner2">inner2</div>
+    </div>
+  </body>
+</html>

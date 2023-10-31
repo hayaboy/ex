@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () {
+            
+            // const img=document.getElementById('image');
+            // img.src = '../js/img/판다.jpg'
+
+            let image2= document.getElementById("image2");
+            
+            // image2.onclick = function () {
+            //     const img=document.getElementById('image');
+            //     img.src = '../js/img/판다.jpg';
+            // }
+
+
+
+
+            image2.addEventListener("click", function (event) {
+                const img=document.getElementById('image');
+                img.src='../js/img/dog1.jpg';
+            }, false);
+        }
+
+
+
+
+    </script>
+
+</head>
+
+    
+    <!-- <img src="../js/img/쿼카.jpg"></img> -->
+    <img id="image" src="../js/img/쿼카.jpg" /><br>
+    <input id="image2" type="button"  value="누르면 판다 나옴" />
+
+</body>
+</html>

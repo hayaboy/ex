@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      window.onload = function () {
+        window.document.getElementById("open").onclick = function () {
+          // alert("hi");
+          win = window.open("popUp.html", "팝업창", "width=400, height=400");          
+          // console.log(win);
+          // win.moveBy(100,200);
+          // win.moveTo(100,200);
+        };
+
+        window.document.getElementById("close").onclick = function () {
+          //   win.close();
+          if (win) {
+            win.close();
+          }
+        };
+      };
+    </script>
+  </head>
+
+  <body>
+    <input id="open" type="button" value="열기" />
+    <input id="close" type="button" value="닫기" />
+  </body>
+</html>
